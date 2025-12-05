@@ -1,0 +1,8 @@
+jdk:
+  - openjdk17
+before_install:
+  - ./gradlew dependencies
+install:
+  - ./gradlew publishToMavenLocal -x test
+options:
+  jvm_args: "-Xmx4g -XX:+UseParallelGC"

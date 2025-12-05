@@ -1,0 +1,77 @@
+package dev.seyfarth.tablericons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.unit.dp
+import dev.seyfarth.tablericons.TablerIcons
+
+val TablerIcons.Outlined.ArrowsCross: ImageVector
+    get() {
+        if (_ArrowsCross != null) {
+            return _ArrowsCross!!
+        }
+        _ArrowsCross = ImageVector.Builder(
+            name = "Filled.ArrowsCross",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f
+        ).apply {
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(16f, 4f)
+                horizontalLineToRelative(4f)
+                verticalLineToRelative(4f)
+            }
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(15f, 9f)
+                lineToRelative(5f, -5f)
+            }
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(4f, 20f)
+                lineToRelative(5f, -5f)
+            }
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(16f, 20f)
+                horizontalLineToRelative(4f)
+                verticalLineToRelative(-4f)
+            }
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(4f, 4f)
+                lineToRelative(16f, 16f)
+            }
+        }.build()
+
+        return _ArrowsCross!!
+    }
+
+@Suppress("ObjectPropertyName")
+private var _ArrowsCross: ImageVector? = null

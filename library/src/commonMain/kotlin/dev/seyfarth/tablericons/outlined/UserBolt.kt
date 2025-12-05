@@ -1,0 +1,63 @@
+package dev.seyfarth.tablericons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.unit.dp
+import dev.seyfarth.tablericons.TablerIcons
+
+val TablerIcons.Outlined.UserBolt: ImageVector
+    get() {
+        if (_UserBolt != null) {
+            return _UserBolt!!
+        }
+        _UserBolt = ImageVector.Builder(
+            name = "Filled.UserBolt",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f
+        ).apply {
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(8f, 7f)
+                arcToRelative(4f, 4f, 0f, isMoreThanHalf = true, isPositiveArc = false, 8f, 0f)
+                arcToRelative(4f, 4f, 0f, isMoreThanHalf = false, isPositiveArc = false, -8f, 0f)
+            }
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(6f, 21f)
+                verticalLineToRelative(-2f)
+                arcToRelative(4f, 4f, 0f, isMoreThanHalf = false, isPositiveArc = true, 4f, -4f)
+                horizontalLineToRelative(4f)
+                curveToRelative(0.267f, 0f, 0.529f, 0.026f, 0.781f, 0.076f)
+            }
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(19f, 16f)
+                lineToRelative(-2f, 3f)
+                horizontalLineToRelative(4f)
+                lineToRelative(-2f, 3f)
+            }
+        }.build()
+
+        return _UserBolt!!
+    }
+
+@Suppress("ObjectPropertyName")
+private var _UserBolt: ImageVector? = null

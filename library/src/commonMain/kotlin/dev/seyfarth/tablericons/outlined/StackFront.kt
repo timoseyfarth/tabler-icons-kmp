@@ -1,0 +1,67 @@
+package dev.seyfarth.tablericons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.unit.dp
+import dev.seyfarth.tablericons.TablerIcons
+
+val TablerIcons.Outlined.StackFront: ImageVector
+    get() {
+        if (_StackFront != null) {
+            return _StackFront!!
+        }
+        _StackFront = ImageVector.Builder(
+            name = "Filled.StackFront",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f
+        ).apply {
+            path(
+                fill = SolidColor(Color.Black),
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(12f, 4f)
+                lineToRelative(-8f, 4f)
+                lineToRelative(8f, 4f)
+                lineToRelative(8f, -4f)
+                lineToRelative(-8f, -4f)
+            }
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(8f, 14f)
+                lineToRelative(-4f, 2f)
+                lineToRelative(8f, 4f)
+                lineToRelative(8f, -4f)
+                lineToRelative(-4f, -2f)
+            }
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(8f, 10f)
+                lineToRelative(-4f, 2f)
+                lineToRelative(8f, 4f)
+                lineToRelative(8f, -4f)
+                lineToRelative(-4f, -2f)
+            }
+        }.build()
+
+        return _StackFront!!
+    }
+
+@Suppress("ObjectPropertyName")
+private var _StackFront: ImageVector? = null

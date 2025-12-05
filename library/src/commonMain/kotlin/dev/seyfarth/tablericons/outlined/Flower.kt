@@ -1,0 +1,84 @@
+package dev.seyfarth.tablericons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.unit.dp
+import dev.seyfarth.tablericons.TablerIcons
+
+val TablerIcons.Outlined.Flower: ImageVector
+    get() {
+        if (_Flower != null) {
+            return _Flower!!
+        }
+        _Flower = ImageVector.Builder(
+            name = "Filled.Flower",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f
+        ).apply {
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(12f, 12f)
+                moveToRelative(-3f, 0f)
+                arcToRelative(3f, 3f, 0f, isMoreThanHalf = true, isPositiveArc = false, 6f, 0f)
+                arcToRelative(3f, 3f, 0f, isMoreThanHalf = true, isPositiveArc = false, -6f, 0f)
+            }
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(12f, 2f)
+                arcToRelative(3f, 3f, 0f, isMoreThanHalf = false, isPositiveArc = true, 3f, 3f)
+                curveToRelative(0f, 0.562f, -0.259f, 1.442f, -0.776f, 2.64f)
+                lineToRelative(-0.724f, 1.36f)
+                lineToRelative(1.76f, -1.893f)
+                curveToRelative(0.499f, -0.6f, 0.922f, -1f, 1.27f, -1.205f)
+                arcToRelative(2.968f, 2.968f, 0f, isMoreThanHalf = false, isPositiveArc = true, 4.07f, 1.099f)
+                arcToRelative(3.011f, 3.011f, 0f, isMoreThanHalf = false, isPositiveArc = true, -1.09f, 4.098f)
+                curveToRelative(-0.374f, 0.217f, -0.99f, 0.396f, -1.846f, 0.535f)
+                lineToRelative(-2.664f, 0.366f)
+                lineToRelative(2.4f, 0.326f)
+                curveToRelative(1f, 0.145f, 1.698f, 0.337f, 2.11f, 0.576f)
+                arcToRelative(3.011f, 3.011f, 0f, isMoreThanHalf = false, isPositiveArc = true, 1.09f, 4.098f)
+                arcToRelative(2.968f, 2.968f, 0f, isMoreThanHalf = false, isPositiveArc = true, -4.07f, 1.098f)
+                curveToRelative(-0.348f, -0.202f, -0.771f, -0.604f, -1.27f, -1.205f)
+                lineToRelative(-1.76f, -1.893f)
+                lineToRelative(0.724f, 1.36f)
+                curveToRelative(0.516f, 1.199f, 0.776f, 2.079f, 0.776f, 2.64f)
+                arcToRelative(3f, 3f, 0f, isMoreThanHalf = false, isPositiveArc = true, -6f, 0f)
+                curveToRelative(0f, -0.562f, 0.259f, -1.442f, 0.776f, -2.64f)
+                lineToRelative(0.724f, -1.36f)
+                lineToRelative(-1.76f, 1.893f)
+                curveToRelative(-0.499f, 0.601f, -0.922f, 1f, -1.27f, 1.205f)
+                arcToRelative(2.968f, 2.968f, 0f, isMoreThanHalf = false, isPositiveArc = true, -4.07f, -1.098f)
+                arcToRelative(3.011f, 3.011f, 0f, isMoreThanHalf = false, isPositiveArc = true, 1.09f, -4.098f)
+                curveToRelative(0.374f, -0.218f, 0.99f, -0.396f, 1.846f, -0.536f)
+                lineToRelative(2.664f, -0.366f)
+                lineToRelative(-2.4f, -0.325f)
+                curveToRelative(-1f, -0.145f, -1.698f, -0.337f, -2.11f, -0.576f)
+                arcToRelative(3.011f, 3.011f, 0f, isMoreThanHalf = false, isPositiveArc = true, -1.09f, -4.099f)
+                arcToRelative(2.968f, 2.968f, 0f, isMoreThanHalf = false, isPositiveArc = true, 4.07f, -1.099f)
+                curveToRelative(0.348f, 0.203f, 0.771f, 0.604f, 1.27f, 1.205f)
+                lineToRelative(1.76f, 1.894f)
+                curveToRelative(-1f, -2.292f, -1.5f, -3.625f, -1.5f, -4f)
+                arcToRelative(3f, 3f, 0f, isMoreThanHalf = false, isPositiveArc = true, 3f, -3f)
+                close()
+            }
+        }.build()
+
+        return _Flower!!
+    }
+
+@Suppress("ObjectPropertyName")
+private var _Flower: ImageVector? = null

@@ -1,0 +1,40 @@
+package dev.seyfarth.tablericons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.unit.dp
+import dev.seyfarth.tablericons.TablerIcons
+
+val TablerIcons.Outlined.Number7: ImageVector
+    get() {
+        if (_Number7 != null) {
+            return _Number7!!
+        }
+        _Number7 = ImageVector.Builder(
+            name = "Filled.Number7",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f
+        ).apply {
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(8f, 4f)
+                horizontalLineToRelative(8f)
+                lineToRelative(-4f, 16f)
+            }
+        }.build()
+
+        return _Number7!!
+    }
+
+@Suppress("ObjectPropertyName")
+private var _Number7: ImageVector? = null

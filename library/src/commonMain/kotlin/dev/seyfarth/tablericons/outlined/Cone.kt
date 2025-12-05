@@ -1,0 +1,45 @@
+package dev.seyfarth.tablericons.outlined
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.unit.dp
+import dev.seyfarth.tablericons.TablerIcons
+
+val TablerIcons.Outlined.Cone: ImageVector
+    get() {
+        if (_Cone != null) {
+            return _Cone!!
+        }
+        _Cone = ImageVector.Builder(
+            name = "Filled.Cone",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f
+        ).apply {
+            path(
+                stroke = SolidColor(Color.Black),
+                strokeLineWidth = 2f,
+                strokeLineCap = StrokeCap.Round,
+                strokeLineJoin = StrokeJoin.Round
+            ) {
+                moveTo(21f, 17.998f)
+                verticalLineToRelative(-0.5f)
+                lineToRelative(-8.13f, -14.99f)
+                arcToRelative(1f, 1f, 0f, isMoreThanHalf = false, isPositiveArc = false, -1.74f, 0f)
+                lineToRelative(-8.13f, 14.989f)
+                verticalLineToRelative(0.5f)
+                curveToRelative(0f, 1.659f, 4.03f, 3.003f, 9f, 3.003f)
+                reflectiveCurveToRelative(9f, -1.344f, 9f, -3.002f)
+            }
+        }.build()
+
+        return _Cone!!
+    }
+
+@Suppress("ObjectPropertyName")
+private var _Cone: ImageVector? = null
