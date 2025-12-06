@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     id("maven-publish")
+    alias(libs.plugins.vanniktechMavenPublish)
 }
 
 kotlin {
@@ -43,19 +44,37 @@ android {
     }
 }
 
-group = "com.github.timoseyfarth"
-version = "0.1.2-alpha"
+mavenPublishing {
+    publishToMavenCentral()
 
-afterEvaluate {
-    publishing {
-        publications {
-            // This creates a specific publication for the full library
-            create<MavenPublication>("maven") {
-                from(components["kotlin"])
-                groupId = group.toString()
-                artifactId = "tabler-icons-kmp"
-                version = version.toString()
+    signAllPublications()
+
+    coordinates("dev.seyfarth", "tabler-icons-kmp", "1.0.0")
+
+    pom {
+        name.set("Tabler Icons KMP")
+        description.set("6000+ Tabler Icons for Kotlin Multiplatform")
+        inceptionYear.set("2025")
+        url.set("https://github.com/timoseyfarth/tabler-icons-kmp")
+        licenses {
+            license {
+                name.set("MIT")
+                url.set("https://opensource.org/licenses/MIT")
+                distribution.set("repo")
             }
+        }
+        developers {
+            developer {
+                id.set("timoseyfarth")
+                name.set("Timo Seyfarth")
+                email.set("timo@seyfarth.dev")
+                url.set("https://timo.seyfarth.dev")
+            }
+        }
+        scm {
+            url.set("https://github.com/timoseyfarth/tabler-icons-kmp")
+            connection.set("scm:git:git://github.com/timoseyfarth/tabler-icons-kmp.git")
+            developerConnection.set("scm:git:ssh://github.com/timoseyfarth/tabler-icons-kmp.git")
         }
     }
 }

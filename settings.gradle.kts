@@ -1,5 +1,7 @@
-rootProject.name = "tabler-icons-kmp"
-include(":library")
+rootProject.name = "tabler-icons-parent"
+
+include(":tabler-icons-kmp")
+project(":tabler-icons-kmp").projectDir = file("library")
 
 pluginManagement {
     repositories {
