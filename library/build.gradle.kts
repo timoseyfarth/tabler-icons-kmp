@@ -44,7 +44,7 @@ android {
 }
 
 group = "com.github.timoseyfarth"
-version = "0.1.0-alpha"
+version = "0.1.2-alpha"
 
 afterEvaluate {
     publishing {
