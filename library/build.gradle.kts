@@ -53,7 +53,7 @@ mavenPublishing {
 
     pom {
         name.set("Tabler Icons KMP")
-        description.set("6000+ Tabler Icons for Kotlin Multiplatform")
+        description.set("~6000 Tabler Icons for Kotlin Multiplatform")
         inceptionYear.set("2025")
         url.set("https://github.com/timoseyfarth/tabler-icons-kmp")
         licenses {
